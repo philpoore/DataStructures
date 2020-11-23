@@ -62,6 +62,24 @@ public:
         return current->value;
     }
     bool empty() { return head == nullptr; }
+
+    void reverse() {
+        ListNode<T> *a = nullptr;
+
+        ListNode<T> *b = head;
+        if (b == nullptr) return;
+
+        ListNode<T> *c = b->next;
+        if (c == nullptr) return;
+
+        while (b) {
+            b->next = a;
+            a = b;
+            b = c;
+            c = c ? c->next : c;
+        }
+        head = a;
+    }
 };
 
 int main()
@@ -97,6 +115,18 @@ int main()
         std::string value = list_strings.front();
         list_strings.pop();
         std::cout << "value string: " << value << std::endl;
+    }
+
+    // Reverse linked list
+    LinkedList<int> list2;
+    list2.push_front(10);
+    list2.push_front(11);
+    list2.push_front(12);
+    list2.reverse();
+    while (!list2.empty()) {
+        int value = list2.front();
+        list2.pop();
+        std::cout << "value list2: " << value << std::endl;
     }
     return 0;
 }
