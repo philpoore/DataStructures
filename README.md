@@ -7,6 +7,7 @@ Implementations of basic data structures.
 - [Trie](./Trie/)
 - [Vector](./Vector/)
 - [Queue](./Queue/)
+- [Stack](./Stack/)
 
 # Building
 
