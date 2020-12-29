@@ -9,6 +9,7 @@ Implementations of basic data structures.
 - [Queue](./Queue/)
 - [Stack](./Stack/)
 - [BinaryTree](./BinaryTree/)
+- [BloomFilter](./BloomFilter/)
 
 # Building
 
