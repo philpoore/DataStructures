@@ -6,8 +6,9 @@ template <class T>
 struct ListNode
 {
     T value;
-    ListNode<T> *next;
-    ListNode<T> *prev;
+    ListNode<T> *next = nullptr;
+    ListNode<T> *prev = nullptr;
+    ListNode() : value(T()) {}
     ListNode(T value) : value(value) {}
 };
 
@@ -15,14 +16,14 @@ struct ListNode
 template <class T>
 class DoubleLinkedList
 {
-    ListNode<T> *head;
-    ListNode<T> *tail;
-    int _size;
+    ListNode<T> *head = nullptr;
+    ListNode<T> *tail = nullptr;
+    int _size = 0;
 
 public:
     class iterator;
 
-    DoubleLinkedList() : head(nullptr), tail(nullptr), _size(0) {}
+    DoubleLinkedList() {}
     ~DoubleLinkedList()
     {
         while (head != nullptr)
