@@ -6,6 +6,7 @@ Implementations of basic data structures.
 - [Double Linked List](./DoubleLinkedList/)
 - [Trie](./Trie/)
 - [Vector](./Vector/)
+- [Queue](./Queue/)
 
 # Building
 
