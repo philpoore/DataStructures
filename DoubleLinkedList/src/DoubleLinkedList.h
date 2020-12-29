@@ -16,11 +16,11 @@ struct ListNode
 template <class T>
 class DoubleLinkedList
 {
-    ListNode<T> *head = nullptr;
-    ListNode<T> *tail = nullptr;
     int _size = 0;
 
 public:
+    ListNode<T> *head = nullptr;
+    ListNode<T> *tail = nullptr;
     class iterator;
 
     DoubleLinkedList() {}
@@ -36,7 +36,7 @@ public:
 
     T front() { return head->value; }
     T back() { return tail->value; }
-    bool empty() { return head == nullptr; }
+    bool empty() { return _size == 0; }
     int size() { return _size; }
 
     void push_front(T value)
@@ -133,6 +133,21 @@ public:
         }
         std::cout << "\n";
     }
+
+    template<typename F>
+    void print(F& to_string) {
+        ListNode<T>* tmp = head;
+        std::cout << "DoubleLinkedList: ";
+        while(tmp) {
+            std::cout << to_string(tmp->value);
+            if (tmp->next)
+                std::cout << " -> ";
+            tmp = tmp->next;
+        }
+        std::cout << "\n";
+    }
+    
+
     void reverse_print() {
         ListNode<T>* tmp = tail;
         std::cout << "DoubleLinkedList: ";
