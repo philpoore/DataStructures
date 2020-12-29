@@ -8,6 +8,7 @@ Implementations of basic data structures.
 - [Vector](./Vector/)
 - [Queue](./Queue/)
 - [Stack](./Stack/)
+- [BinaryTree](./BinaryTree/)
 
 # Building
 
